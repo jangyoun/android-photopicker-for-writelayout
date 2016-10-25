@@ -123,7 +123,7 @@ public class ModifyActivity extends AppCompatActivity {
     public void OnClickSend(View v) {
 
         String edit = mEdit.getText().toString();
-        edit = edit.substring(0, 7).concat("...");
+        edit = edit.length() <= 7 ? edit : edit.substring(0, 7).concat("...");
 
         String photoIds = "";
         for (Photo p : mSelectedPhotoArrList)
